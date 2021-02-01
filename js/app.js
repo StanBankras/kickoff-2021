@@ -8,6 +8,17 @@ const teams = fetch(`${url}/squads/1/teams/2/members`)
   .then(data => {
     me = data.find(d => d.id === "3");
     document.title = document.title.replace('{NAAM}', `${me.name} ${me.surname}`);
+    
+    const name = document.getElementById('name');
+    name.innerHTML = `${me.name} ${me.surname}`
+
+    const github = document.getElementById('github');
+    console.log(github);
+    github.href = `https://github.com/${me.githubHandle}`;
+    github.innerHTML = `/${me.githubHandle}`
+
+    const mugshot = document.getElementById('mugshot');
+    mugshot.src = me.mugshot;
   });
 
 
