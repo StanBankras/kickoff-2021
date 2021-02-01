@@ -52,16 +52,20 @@ main {
       margin-bottom: 1rem;
       letter-spacing: 1px;
     }
-    .addition {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      img {
-        max-width: 30px;
-        margin-right: 1rem;
+    .additions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      .addition {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.3rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        p {
+          margin-right: 1rem;
+        }
       }
     }
   }

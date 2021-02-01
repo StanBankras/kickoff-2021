@@ -74,22 +74,29 @@ main {
   letter-spacing: 1px;
 }
 
-.card .details .addition {
+.card .details .additions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card .details .additions .addition {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.card .details .addition:last-child {
+.card .details .additions .addition:last-child {
   margin-bottom: 0;
 }
 
-.card .details .addition img {
-  max-width: 30px;
+.card .details .additions .addition p {
   margin-right: 1rem;
 }
 
