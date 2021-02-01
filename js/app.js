@@ -13,7 +13,6 @@ const teams = fetch(`${url}/squads/1/teams/2/members`)
     name.innerHTML = `${me.name} ${me.surname}`
 
     const github = document.getElementById('github');
-    console.log(github);
     github.href = `https://github.com/${me.githubHandle}`;
     github.innerHTML = `/${me.githubHandle}`
 
